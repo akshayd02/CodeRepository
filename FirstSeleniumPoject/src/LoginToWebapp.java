@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginToWebapp {
 
-	private static final String[] dateStr = { "Mar 04 2021"}; // provide separate values
+	private static final String[] dateStr = { "Mar 08 2021", "Mar 09 2021", "Mar 10 2021", "Mar 11 2021"}; // provide separate values
 
 	private static WebDriver chromeDriver;
 	private static final String TASKLIST = "tasklist";
@@ -105,11 +105,11 @@ public class LoginToWebapp {
 
 			// Wait till time tab appears and click
 			WebElement timeTab = wait.until(
-					ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"MenuContent\"]/ul/li[3]/a")));
+					ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"MenuContent\"]/ul/li[4]/a")));
 			timeTab.click();
 
 			// Click on Apply beneath SWIPE option
-			chromeDriver.findElement(By.xpath("//*[@id=\"MenuContent\"]/ul/li[3]/ul/li[4]/ul/a")).click();
+			chromeDriver.findElement(By.xpath("//*[@id=\"MenuContent\"]/ul/li[4]/ul/li[4]/ul/a")).click();
 
 			// click on Add New btn
 			for (int i = 0; i < dateStr.length; i++) {
@@ -167,8 +167,8 @@ public class LoginToWebapp {
 
 		} finally {
 			// sign out and close browser
-			chromeDriver.findElement(By.xpath("//*[@id=\"divTop\"]/div/ul/ul/li[4]/a/i")).click();
-			chromeDriver.findElement(By.xpath("//*[@id=\"divTop\"]/div/ul/ul/li[4]/ul/li[3]/a")).click();
+			chromeDriver.findElement(By.xpath("//*[@id=\"ctl00_empphoto\"]")).click();
+			chromeDriver.findElement(By.xpath("//*[@id=\"divTop\"]/div/ul[2]/li[2]/ul/li[5]/div/ul/li/div[1]/div[3]/div[3]/a")).click();
 
 			chromeDriver.close();
 
