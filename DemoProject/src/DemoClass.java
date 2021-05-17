@@ -2,7 +2,8 @@
 public class DemoClass {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
+		int c = 3;
+		System.out.println(c%2);
 	}
 
 }

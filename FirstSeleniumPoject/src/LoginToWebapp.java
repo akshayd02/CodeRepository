@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginToWebapp {
 
-	private static final String[] dateStr = { "Mar 08 2021", "Mar 09 2021", "Mar 10 2021", "Mar 11 2021"}; // provide separate values
+	private static final String[] dateStr = {  "Mar 17 2021", "Mar 18 2021"}; // provide separate values
 
 	private static WebDriver chromeDriver;
 	private static final String TASKLIST = "tasklist";
@@ -85,7 +85,7 @@ public class LoginToWebapp {
 		try {
 			// Robot robot = new Robot();
 			chromeDriver = token.getChromeDriver();
-			WebDriverWait wait = new WebDriverWait(chromeDriver, 15);
+			WebDriverWait wait = new WebDriverWait(chromeDriver, 30);
 			;
 
 			// load SPINE HR
